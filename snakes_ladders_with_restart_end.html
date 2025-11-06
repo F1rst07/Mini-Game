@@ -621,6 +621,8 @@ function updateProgress(){ if(!progBar){ progBar = document.getElementById('prog
 function init(){
   setTheme('theme-ice');
   renderBoard(); updateProgress();
+  // 👉 hook roll button
+  rollBtn.addEventListener('click', rollDie);
   // initial UI
   turnBadge.textContent='กด "เริ่มเกม" เพื่อจับเวลา';
   rollBtn.disabled = true; canRoll = false; refreshRollBtn();
